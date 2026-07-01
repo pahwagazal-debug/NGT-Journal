@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Search Results | NGT E-Journal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#707974",
+                        "inverse-surface": "#2e3132",
+                        "surface-container": "#edeeef",
+                        "on-primary-fixed-variant": "#17503d",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "primary": "#003626",
+                        "surface-variant": "#e1e3e4",
+                        "tertiary": "#003626",
+                        "surface-container-high": "#e7e8e9",
+                        "secondary-container": "#79acff",
+                        "primary-fixed-dim": "#9ad2b9",
+                        "primary-container": "#154e3b",
+                        "surface-bright": "#f8f9fa",
+                        "inverse-on-surface": "#f0f1f2",
+                        "text-charcoal": "#212529",
+                        "surface-tint": "#326854",
+                        "surface-dim": "#d9dadb",
+                        "on-surface-variant": "#404944",
+                        "secondary-fixed-dim": "#a9c7ff",
+                        "on-tertiary-fixed": "#002116",
+                        "surface-container-highest": "#e1e3e4",
+                        "tertiary-fixed": "#9ef4d0",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#d6e3ff",
+                        "on-secondary-fixed-variant": "#00468c",
+                        "surface-green": "#C4DDB6",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f8f9fa",
+                        "on-tertiary-container": "#6ec2a1",
+                        "on-secondary-container": "#003f7f",
+                        "primary-fixed": "#b6efd5",
+                        "on-primary-container": "#87bea6",
+                        "tertiary-container": "#004f39",
+                        "on-background": "#191c1d",
+                        "inverse-primary": "#9ad2b9",
+                        "tertiary-fixed-dim": "#83d7b5",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#c0c9c2",
+                        "on-surface": "#191c1d",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#00513b",
+                        "secondary": "#215eab",
+                        "surface-container-low": "#f3f4f5",
+                        "border-muted": "#DEE2E6",
+                        "on-secondary-fixed": "#001b3d",
+                        "on-primary-fixed": "#002116",
+                        "surface": "#f8f9fa"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "max-width": "1280px",
+                        "margin-lg": "64px",
+                        "gutter": "24px",
+                        "margin-md": "32px",
+                        "margin-sm": "16px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Public Sans"],
+                        "display-lg": ["\"Source Serif 4\""],
+                        "body-lg": ["Public Sans"],
+                        "body-sm": ["Public Sans"],
+                        "headline-lg": ["\"Source Serif 4\""],
+                        "headline-lg-mobile": ["\"Source Serif 4\""],
+                        "headline-md": ["\"Source Serif 4\""],
+                        "label-md": ["Public Sans"],
+                        "body-md": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #f8f9fa;
+        }
+        .search-container {
+            transition: box-shadow 0.3s ease;
+        }
+        .search-container:focus-within {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        .case-card {
+            transition: background-color 0.15s ease;
+        }
+        .case-card:hover {
+            background-color: #f1f3f5;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-on-background border-b border-muted dark:border-outline h-16">
+<div class="flex justify-between items-center px-margin-sm md:px-margin-lg h-16 w-full max-w-max-width mx-auto">
+<div class="flex items-center gap-2">
+<img alt="NGT Logo" class="h-10 w-10 object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AP1WRLuBwiVdd-gUviPXMxqp51JcMBG4o-XhdUHV-H4X6ZQx4LsaUkDQy7D5T5VFJw0kJ4pBfwSz68Dculfqn5XNeDwgA874F7C2GMpq-PMdCYKDAhbGINfZO2AqNLvIV7JPiI2rzY_8TYkYC5LgPkEUBuUHTcNmxOToUC_Ee_iY0OuRfx6-C3m8jb8fYBVBpLSjw91vSOvAufTH9qcCwOwcRheBpWEG1wy2JodHOlDp_WrVIFIYdz3hV5E-8Q"/>
+<span class="font-headline-md text-headline-md font-semibold text-primary dark:text-primary-fixed">NGT E-Journal</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-surface-container-high rounded-full transition-colors">notifications</button>
+<div class="h-8 w-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-lg">
+                    JD
+                </div>
+</div>
+</div>
+</header>
+<main class="mt-16 pb-24 max-w-max-width mx-auto px-margin-sm md:px-margin-lg">
+<!-- Search & Control Header -->
+<section class="py-6 space-y-4">
+<div class="flex flex-col md:flex-row md:items-center gap-gutter">
+<!-- Compact Search Bar -->
+<div class="relative flex-grow search-container bg-surface-container-lowest border border-border-muted rounded-lg overflow-hidden flex items-center h-12">
+<span class="material-symbols-outlined absolute left-4 text-primary">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 pl-12 pr-4 font-body-md text-text-charcoal" placeholder="Search case laws, orders, or topics..." type="text" value="Air pollution NCR"/>
+<button class="h-full px-6 bg-primary text-on-primary font-label-lg hover:opacity-90 transition-opacity">Search</button>
+</div>
+<!-- Filter & Sort Actions -->
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-4 py-2 border border-primary text-primary rounded font-label-lg hover:bg-surface-green transition-colors">
+<span class="material-symbols-outlined" style="font-size: 18px;">tune</span>
+                        Filter
+                    </button>
+<div class="relative group">
+<select class="appearance-none bg-surface-container-low border border-border-muted rounded px-4 py-2 pr-10 font-label-lg text-text-charcoal focus:outline-none focus:border-primary cursor-pointer">
+<option>Newest First</option>
+<option selected="">Most Relevant</option>
+<option>Oldest First</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Active Filters -->
+<div class="flex flex-wrap items-center gap-2">
+<span class="text-label-md text-on-surface-variant uppercase tracking-wider mr-2">Active Filters:</span>
+<div class="flex items-center gap-1 bg-surface-green text-primary px-3 py-1 rounded-full text-label-md">
+<span>Bench: Principal</span>
+<button class="material-symbols-outlined" style="font-size: 14px;">close</button>
+</div>
+<div class="flex items-center gap-1 bg-surface-green text-primary px-3 py-1 rounded-full text-label-md">
+<span>Year: 2024-25</span>
+<button class="material-symbols-outlined" style="font-size: 14px;">close</button>
+</div>
+<button class="text-label-md text-secondary underline ml-2">Clear All</button>
+</div>
+</section>
+<!-- Results List -->
+<div class="flex flex-col gap-unit">
+<div class="mb-4 text-label-lg text-on-surface-variant">Showing 1-20 of 142 results</div>
+<div class="space-y-4">
+<!-- Case Card 1 -->
+<article class="case-card bg-surface-container-lowest border border-border-muted p-6 rounded-lg flex flex-col md:flex-row gap-6">
+<div class="flex-grow space-y-3">
+<div class="flex justify-between items-start">
+<h2 class="font-headline-md text-headline-md text-primary hover:underline cursor-pointer">Court on its own Motion vs. State of Delhi</h2>
+<span class="bg-primary-container/10 text-primary border border-primary/20 px-2 py-0.5 rounded text-label-md h-fit">Disposed</span>
+</div>
+<div class="flex items-center gap-2 text-label-md text-on-surface-variant font-medium">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+                            Principal Bench
+                            <span class="mx-1">•</span>
+<span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span>
+                            15 Feb 2025
+                        </div>
+<div class="flex flex-wrap gap-2 py-1">
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded text-label-md">Air Quality</span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded text-label-md">Urban Planning</span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded text-label-md">Stubble Burning</span>
+</div>
+<p class="font-body-md text-on-surface-variant line-clamp-2 leading-relaxed italic">
+                            "...The Tribunal takes note of the persistent decline in air quality indices across the National Capital Region. Directives are hereby issued to the Chief Secretary to ensure immediate implementation of the GRAP-IV measures..."
+                        </p>
+</div>
+<div class="flex flex-col md:w-48 gap-3 shrink-0">
+<button class="w-full bg-primary text-on-primary py-2.5 rounded font-label-lg flex items-center justify-center gap-2 hover:opacity-95 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+                            View Order
+                        </button>
+<button class="w-full border border-secondary text-secondary py-2.5 rounded font-label-lg flex items-center justify-center gap-2 hover:bg-secondary/5 transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+                            Save to Library
+                        </button>
+</div>
+</article>
+<!-- Case Card 2 -->
+<article class="case-card bg-surface-container-lowest border border-border-muted p-6 rounded-lg flex flex-col md:flex-row gap-6">
+<div class="flex-grow space-y-3">
+<div class="flex justify-between items-start">
+<h2 class="font-headline-md text-headline-md text-primary hover:underline cursor-pointer">Sanjay Kumar vs. Union of India &amp; Ors.</h2>
+<span class="bg-surface-dim text-on-surface-variant border border-outline-variant px-2 py-0.5 rounded text-label-md h-fit">Pending</span>
+</div>
+<div class="flex items-center gap-2 text-label-md text-on-surface-variant font-medium">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+                            Central Zone Bench
+                            <span class="mx-1">•</span>
+<span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span>
+                            02 Feb 2025
+                        </div>
+<div class="flex flex-wrap gap-2 py-1">
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded text-label-md">Illegal Mining</span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded text-label-md">River Narmada</span>
+</div>
+<p class="font-body-md text-on-surface-variant line-clamp-2 leading-relaxed italic">
+                            "The applicant has raised serious concerns regarding mechanical dredging operations within the prohibited zones of the riverbed. The State PCB is directed to file a status report within three weeks..."
+                        </p>
+</div>
+<div class="flex flex-col md:w-48 gap-3 shrink-0">
+<button class="w-full bg-primary text-on-primary py-2.5 rounded font-label-lg flex items-center justify-center gap-2 hover:opacity-95 transition-all">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+                            View Order
+                        </button>
+<button class="w-full border border-secondary text-secondary py-2.5 rounded font-label-lg flex items-center justify-center gap-2 hover:bg-secondary/5 transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+                            Save to Library
+                        </button>
+</div>
+</article>
+<!-- Case Card 3 -->
+<article class="case-card bg-surface-container-lowest border border-border-muted p-6 rounded-lg flex flex-col md:flex-row gap-6">
+<div class="flex-grow space-y-3">
+<div class="flex justify-between items-start">
+<h2 class="font-headline-md text-headline-md text-primary hover:underline cursor-pointer">Save Forest Alliance vs. State of Maharashtra</h2>
+<span class="bg-primary-container/10 text-primary border border-primary/20 px-2 py-0.5 rounded text-label-md h-fit">Disposed</span>
+</div>
+<div class="flex items-center gap-2 text-label-md text-on-surface-variant font-medium">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+                            Western Zone Bench
+                            <span class="mx-1">•</span>
+<span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span>
+                            28 Jan 2025
+                        </div>
+<div class="flex flex-wrap gap-2 py-1">
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded text-label-md">Deforestation</span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded text-label-md">Western Ghats</span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded text-label-md">Eco-Sensitive Zone</span>
+</div>
+<p class="font-body-md text-on-surface-variant line-clamp-2 leading-relaxed italic">
+                            "The final judgment emphasizes the 'Precautionary Principle'. No further construction shall be permitted within the buffer zone of the declared eco-sensitive area without prior MoEFCC clearance..."
+                        </p>
+</div>
+<div class="flex flex-col md:w-48 gap-3 shrink-0">
+<button class="w-full bg-primary text-on-primary py-2.5 rounded font-label-lg flex items-center justify-center gap-2 hover:opacity-95 transition-all">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+                            View Order
+                        </button>
+<button class="w-full border border-secondary text-secondary py-2.5 rounded font-label-lg flex items-center justify-center gap-2 hover:bg-secondary/5 transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+                            Save to Library
+                        </button>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center items-center gap-2 mt-8">
+<button class="p-2 rounded border border-border-muted hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded bg-primary text-on-primary font-label-lg">1</button>
+<button class="w-10 h-10 rounded border border-border-muted hover:bg-surface-container-high font-label-lg">2</button>
+<button class="w-10 h-10 rounded border border-border-muted hover:bg-surface-container-high font-label-lg">3</button>
+<span class="px-2 text-on-surface-variant">...</span>
+<button class="w-10 h-10 rounded border border-border-muted hover:bg-surface-container-high font-label-lg">8</button>
+<button class="p-2 rounded border border-border-muted hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface dark:bg-on-background border-t border-muted dark:border-outline h-16 flex justify-around items-center px-margin-sm pb-safe">
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-surface-green dark:bg-tertiary-container text-primary dark:text-tertiary-fixed rounded-full px-4 py-1 transition-all active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="font-label-md text-label-md">Search</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+<span class="font-label-md text-label-md">Saved</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">help</span>
+<span class="font-label-md text-label-md">Help</span>
+</div>
+</nav>
+<!-- Floating Filter Trigger (Alternative Mobile UX) -->
+<button class="md:hidden fixed bottom-20 right-6 w-14 h-14 bg-primary text-on-primary rounded-full shadow-lg flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<script>
+        // Simple micro-interaction for cards
+        document.querySelectorAll('.case-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-2px)';
+                card.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.05)';
+                card.style.transition = 'all 0.3s ease';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = 'none';
+            });
+        });
+    </script>
+</body></html>
