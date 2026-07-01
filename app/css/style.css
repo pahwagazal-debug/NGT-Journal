@@ -1,0 +1,169 @@
+:root {
+  --primary: #003626;
+  --secondary: #215eab;
+  --tertiary: #003626;
+  --error: #ba1a1a;
+  --surface: #f8f9fa;
+  --surface-container: #edeeef;
+  --on-surface: #191c1d;
+  --on-surface-variant: #404944;
+  --surface-green: #C4DDB6;
+  --border-muted: #DEE2E6;
+}
+
+body.dark-mode {
+  --surface: #191c1d;
+  --on-surface: #f0f1f2;
+  --surface-container: #2e3132;
+  --on-surface-variant: #c0c9c2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Public Sans', sans-serif;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-slide {
+  animation: slideIn 0.3s ease;
+}
+
+.animate-fade {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.3s ease;
+}
+
+.case-card {
+  border: 1px solid var(--border-muted);
+  border-radius: 8px;
+  padding: 20px;
+  background-color: var(--surface-container);
+  transition: all 0.3s ease;
+}
+
+.case-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--secondary);
+  border: 2px solid var(--secondary);
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(33, 94, 171, 0.1);
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-muted);
+  border-radius: 6px;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  font-size: 16px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 54, 38, 0.1);
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-disposed {
+  background-color: rgba(0, 54, 38, 0.1);
+  color: var(--primary);
+}
+
+.badge-pending {
+  background-color: rgba(186, 26, 26, 0.1);
+  color: var(--error);
+}
+
+.chip {
+  display: inline-block;
+  background-color: var(--surface-container);
+  color: var(--on-surface-variant);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.loader {
+  border: 3px solid var(--surface-container);
+  border-top: 3px solid var(--primary);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
